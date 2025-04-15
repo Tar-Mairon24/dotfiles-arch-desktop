@@ -1,0 +1,9 @@
+{ "updates": [ {"package": "cryptsetup", "version": "2.7.5-1"},
+{"package": "harfbuzz", "version": "10.1.0-1"},
+{"package": "linux-firmware", "version": "20241210.b00a7f7e-1"},
+{"package": "linux-firmware-whence", "version": "20241210.b00a7f7e-1"},
+{"package": "systemd", "version": "257.2-1"},
+{"package": "systemd-libs", "version": "257.2-1"},
+{"package": "systemd-sysvcompat", "version": "257.2-1"},
+{"package": "util-linux", "version": "2.40.3-1"},
+{"package": "util-linux-libs", "version": "2.40.3-1"} ] }

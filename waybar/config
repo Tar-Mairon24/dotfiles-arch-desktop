@@ -1,0 +1,39 @@
+{
+    "height": 38,
+    "mod": "dock",
+    "layer": "top",
+    "position": "top",
+    "margin-top": 5,
+    "margin-bottom": 5,
+
+    "include": ["~/.config/waybar/modules.json"],
+    
+    "modules-left": [
+        "custom/launcher",
+        "group/hardware",
+        "network",
+        "custom/updates",
+        "idle_inhibitor"
+    ],
+
+    "modules-center": [
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+
+    "modules-right": [
+        "mpris",
+        "cava",
+        "wireplumber",
+        "clock",
+        "custom/exit"
+    ],
+
+    "group/hardware": {
+        "orientation": "horizontal",
+        "modules": [
+            "cpu",
+            "memory"
+        ]
+    }
+}
