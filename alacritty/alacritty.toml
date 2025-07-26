@@ -6,7 +6,7 @@ family = "FiraCode Nerd Font"
 style = "Regular"
 
 [window]
-opacity = 0.60
+opacity = 0.70
 startup_mode = "Maximized"
 title = "Alacritty"
 dynamic_title = true

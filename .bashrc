@@ -91,7 +91,7 @@ if [[ $(tty) == *"pts"* ]]; then
 fi
 
 # Created by `pipx` on 2024-02-21 02:21:56
-export PATH="$PATH:/home/tarmairon/.local/bin"
+export PATH="$HOME/.cargo/bin:$PATH"
 export CHROME_EXECUTABLE=/opt/google/chrome/google-chrome
 
 #source the path to bash-completion

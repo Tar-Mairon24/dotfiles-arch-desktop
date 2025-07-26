@@ -1,181 +1,162 @@
 {
-    "hyprland/workspaces": {
-        "disable-scroll": false,
-        "all-outputs": true,
-        "format": "{icon}",
-        "format-icons": {
-            "1": " ",
-            "2": " ",
-            "3": "󰺷 ",
-            "4": " ",
-            "5": "󰽴 ", 
-            "6": "󰨞 ", 
-            "default": " "
-        },
-        "on-click": "activate",
-        "on-scroll-up": "hyprctl dispatch workspace e-1",
-        "on-scroll-down": "hyprctl dispatch workspace e+1"
-    },
-
-    "hyprland/window": {
-        "format": "{class}",
-        "separate-outputs": true,
-        "on-click-right": "sleep .3 && ~/.config/hypr/resize.sh",
-        "on-click-middle": "hyprctl dispatch killactive"
-    },
-
-    "custom/launcher": {
-        "format": " ",
-        "on-click": "rofi -show drun",
-        "on-click-right": "rofi  -show run",
-        "tooltip": false
-    },
-
-    "cpu": {
-        "interval": 1,
-        "format": " {usage}%",
-        "tooltip": false,
-        "on-click-right": "alacritty --class wm-floating --title top --hold --command 'htop'"
-    },
-
-    "memory": {
-        "interval": 2,
-        "format": " {used}GB",
-        "max-length": 30,
-        "tooltip": true,
-        "tooltip-format": " {used:0.1f}GB/{total:0.1f}GB",
-        "on-click-right": "alacritty --class wm-floating --title top --hold --command 'htop'"
- },
-
-    "custom/updates": {
-        "interval": 3600,
-        "format": "󱧘 {}",
-        "exec": "~/.config/waybar/scripts/arch_update.sh",
-        "on-click": "alacritty --class wm-floating --title update --hold --command 'yay'",
-        "tooltip": true
-    },
-
-    "clock": {
-        "interval": 1,
-        "format": " {:%I:%M %p}",
-        "format-alt": "{:%A, %B %d, %Y %I:%M:%S %p } ",
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "calendar": {
-                    "mode"          : "month",
-                    "weeks-pos"     : "right",
-                    "on-scroll"     : 1,
-                    "on-click-right": "mode",
-                    "format": {
-                              "months":     "<span color='#ffead3'><b>{}</b></span>",
-                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
-                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
-                              }
-                    },
-        "actions":  {
-                    "on-click-right": "mode",
-                    "on-click-forward": "tz_up",
-                    "on-click-backward": "tz_down",
-                    "on-scroll-up": "shift_up",
-                    "on-scroll-down": "shift_down"
-                    }
-    },
-
-    "custom/exit": {
-        "format": "",
-        "on-click": "tschuss",
-        "tooltip": false
-    },
-   
-    "network": {
-        "interval": 1,
-        "format": "{bandwidthDownBytes}",
-        "format-wifi": "   {essid}",
-        "format-ethernet": "󰈀  {ifname}",
-        "format-disconnected": "󰤭",
-        "tooltip-format": "󰈀 {ifname} via {gwaddri}",
-        "toolti:p-format-wifi": "   {essid} ({signalStrength}%)",
-        "tooltip-format-ethernet": "󰈀 {ifname} ({ipaddr}/{cidr})",
-        "tooltip-format-disconnected": "Disconnected",
-        "max-length": 50,
-        "on-click": "alacritty --class wm-floating --title Network --hold --command 'nmtui'"    
-    },
-
-    "wireplumber":{
-      "scroll-step":5,
-      "format":"{icon} {volume}%",
-      "format-muted":"",
-      "format-icons":{
-        "headphone":"",
-        "hands-free":"",
-        "headset":"",
-        "phone":"",
-        "portable":"",
-        "car":"",
-        "default":[
-          "",
-          "",
-          ""
-        ]
-      },
-      "on-click":"wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-      "on-click-right":"flatpak run com.saivert.pwvucontrol"
-    },
-
-    "cava":{
-      "framerate":30,
-      "autosens":1,
-      "bars":14,
-      "lower_cutoff_freq":50,
-      "higher_cutoff_freq":10000,
-      "method":"pipewire",
-      "source":"auto",
-      "stereo":true,
-      "bar_delimiter":0,
-      "noise_reduction":0.77,
-      "input_delay":2,
-      "hide_on_silence":true,
-      "format-icons":[
-        "▁",
-        "▂",
-        "▃",
-        "▄",
-        "▅",
-        "▆",
-        "▇",
-        "█"
-      ],
-      "actions":{
-        "on-click-right":"mode"
-      }
-    },
-
-    "mpris":{
-      "format":" {status_icon} {dynamic}",
-      "interval":1,
-      "dynamic-len":40,
-      "status-icons":{
-        "playing":"▶",
-        "paused":"⏸",
-        "stopped":""
-      },
-      "dynamic-order":[
-        "title",
-        "artist"
-      ],
-      "ignored-players":[
-        "firefox"
-      ]
-    },
-
-    "idle_inhibitor": {
+  "hyprland/workspaces#hw1": {
+    "active-only": "true",
+    "all-outputs":"true",
     "format": "{icon}",
     "format-icons": {
-        "activated": "",
-        "deactivated": ""
+      "1": " ",
+      "2": " ",
+      "3": " ",
+      "default": " "
+    },
+    "ignore-workspaces": ["4", "5", "6", "7", "8", "9", "10", "11", "12"],
+    "persistent-workspaces": {
+      "DP-1": [1, 2, 3]
+    },
+    "on-click": "activate"
+  },
+  "hyprland/workspaces#hw2": {
+    "active-only": "true",
+    "all-outputs": "false",
+    "format": "{icon}",
+    "format-icons": {
+      "4": " ",
+      "5": "󰺷 ",
+      "6": "󰓓 ",
+      "default": " "
+    },
+    "ignore-workspaces": ["1", "2", "3", "7", "8", "9", "10", "11", "12"],
+    "persistent-workspaces": {
+      "DP-1": [4, 5, 6]
+    },
+    "on-click": "activate"
+  },
+  "hyprland/workspaces#hw3": {
+    "active-only": "true",
+    "all-outputs": "false",
+    "format": "{icon}",
+    "format-icons": {
+      "7": " ",
+      "8": " ",
+      "9": " ",
+      "default": " "
+    },
+    "ignore-workspaces": ["1", "2", "3", "4", "5", "6", "10", "11", "12"],
+
+    "persistent-workspaces": {
+      "HDMI-A-2": [7, 8, 9]
+    },
+    "on-click": "activate"
+  },
+  "hyprland/workspaces#hw4": {
+    "active-only": "true",
+    "all-outputs": "false",
+    "format": "{icon}",
+    "format-icons": {
+      "10": " ",
+      "11": " ",
+      "12": " ",
+      "default": " "
+    },
+    "ignore-workspaces": ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+
+    "persistent-workspaces": {
+      "DP-1": [10, 11, 12]
+    },
+    "on-click": "activate"
+  },
+
+
+
+  "hyprland/window": {
+    "format": "{class}",
+    "separate-outputs": true,
+    "on-click-right": "sleep .3 && ~/.config/hypr/resize.sh",
+    "on-click-middle": "hyprctl dispatch killactive"
+  },
+  "custom/updates": {
+    "interval": 900,
+    "format": "󱧘 {}",
+    "exec": "~/.config/waybar/scripts/arch_update.sh",
+    "on-click": "kitty --class wm-floating --title update yay",
+    "tooltip": true
+  },
+  "clock": {
+    "interval": 1,
+    "format": " {:%I:%M %p}",
+    "format-alt": "{:%A, %B %d, %Y %I:%M:%S %p } ",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
     }
-}
- 
- 
+  },
+  "custom/exit": {
+    "format": "",
+    "on-click": "wlogout",
+    "tooltip": false
+  },
+  "network": {
+    "interface": "enp3s0",
+    "interval": 1,
+    "format-ethernet": "󰈀  {bandwidthDownBytes}",
+    "format-disconnected": "󰤭",
+    "tooltip-format-ethernet": "{essid}({ipaddr}/{cidr})",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50,
+    "on-click": "kitty --class wm-floating --title Network --hold --command 'nmtui'"
+  },
+  "mpris": {
+    "format": " {status_icon} {dynamic}",
+    "interval": 1,
+    "dynamic-len": 30,
+    "status-icons": {
+      "playing": "▶",
+      "paused": "⏸",
+      "stopped": ""
+    },
+    "dynamic-order": [
+      "title",
+      "artist"
+    ],
+    "ignored-players": [
+      "firefox"
+    ]
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  },
+  "user": {
+        "format": " {user}",
+        "interval": 60,
+        "icon": "true",
+        "height": 30,
+        "width": 30,
+        "open-on-click": "true"
+  },
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal"
+  }
 }

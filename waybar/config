@@ -1,39 +1,66 @@
-{
+[
+  {
+    "output": "DP-1",
     "height": 38,
     "mod": "dock",
     "layer": "top",
     "position": "top",
-    "margin-top": 5,
-    "margin-bottom": 5,
+    "margin-top": 2,
+    "margin-bottom": 2,
+    "fixed-center": "true",
 
     "include": ["~/.config/waybar/modules.json"],
     
     "modules-left": [
-        "custom/launcher",
-        "group/hardware",
-        "network",
+        "user",
         "custom/updates",
-        "idle_inhibitor"
+        "mpris"
     ],
 
     "modules-center": [
-        "hyprland/workspaces",
-        "hyprland/window"
+        "hyprland/workspaces#hw1",
+        "hyprland/window",
+        "hyprland/workspaces#hw2"
     ],
 
     "modules-right": [
-        "mpris",
-        "cava",
-        "wireplumber",
+        "network",
+        "pulseaudio/slider",
         "clock",
+        "idle_inhibitor",
         "custom/exit"
     ],
+  },
+  {
+    "output": "HDMI-A-2",
+    "height": 38,
+    "mod": "dock",
+    "layer": "top",
+    "position": "top",
+    "margin-top": 2,
+    "margin-bottom": 2,
+    "fixed-center": "true",
 
-    "group/hardware": {
-        "orientation": "horizontal",
-        "modules": [
-            "cpu",
-            "memory"
-        ]
-    }
-}
+    "include": ["~/.config/waybar/modules.json"],
+    
+    "modules-left": [
+        "user",
+        "custom/updates",
+        "mpris"
+    ],
+
+    "modules-center": [
+        "hyprland/workspaces#hw3",
+        "hyprland/window",
+        "hyprland/workspaces#hw4"
+    ],
+
+    "modules-right": [
+        "network",
+        "pulseaudio/slider",
+        "clock",
+        "idle_inhibitor",
+        "custom/exit"
+    ],
+  }
+]
